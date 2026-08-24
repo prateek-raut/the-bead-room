@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | The Bead Room by Pallas</title>
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+</head>
+<body>
+
+  <!-- Admin Login Screen Overlay -->
+  <div id="admin-login-screen" style="position:fixed; inset:0; z-index:9999; background:linear-gradient(135deg, #1e1319 0%, #2d1822 50%, #3b1126 100%); display:flex; align-items:center; justify-content:center; padding:20px;">
+    <div style="background:rgba(255,255,255,0.96); backdrop-filter:blur(20px); border-radius:24px; padding:40px; max-width:440px; width:100%; box-shadow:0 20px 50px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.8); text-align:center;">
+      
+      <img src="/images/logo.jpg" alt="The Bead Room by Pallas" style="max-width:180px; height:auto; margin-bottom:16px; border-radius:10px; border:1px solid #fbcfe8; padding:4px; background:#fff;">
+      
+      <h2 style="font-family:'Outfit',sans-serif; font-size:1.5rem; font-weight:800; color:#1e1319; margin-bottom:4px;">Admin Portal Login</h2>
+      <p style="font-size:0.85rem; color:#64748b; margin-bottom:24px;">Please sign in to access product uploads, customer inquiries & orders.</p>
+
+      <form id="admin-login-form">
+        <div class="form-group" style="text-align:left;">
+          <label class="form-label" style="font-size:0.8rem; font-weight:700; color:#1e1319;">Admin Email Address</label>
+          <input type="email" id="login-email" class="form-control" placeholder="sarakamdar26@gmail.com" required value="sarakamdar26@gmail.com">
+        </div>
+
+        <div class="form-group" style="text-align:left;">
+          <label class="form-label" style="font-size:0.8rem; font-weight:700; color:#1e1319;">Password</label>
+          <input type="password" id="login-password" class="form-control" placeholder="Enter admin password" required value="Pallas@123">
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:0.8rem;">
+          <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+            <input type="checkbox" id="login-remember" checked>
+            <span>Remember Me</span>
+          </label>
+          <span style="color:#be185d; font-weight:bold; cursor:pointer;" onclick="alert('Default password is: Pallas@123')">Forgot Password?</span>
+        </div>
+
+        <div id="login-error-msg" style="display:none; background:#fee2e2; border:1px solid #fecaca; color:#991b1b; padding:10px; border-radius:8px; font-size:0.82rem; margin-bottom:16px; font-weight:bold;"></div>
+
+        <button type="submit" id="btn-admin-login" class="btn-admin-action" style="width:100%; justify-content:center; padding:14px; font-size:1rem;">
+          🔒 Login to Dashboard
+        </button>
+      </form>
+
+      <div style="margin-top:20px; padding-top:16px; border-top:1px solid #e2e8f0; font-size:0.78rem; color:#64748b;">
+        Default Email: <strong>sarakamdar26@gmail.com</strong><br>
+        Default Password: <strong>Pallas@123</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Sidebar -->
+  <aside class="admin-sidebar" id="admin-sidebar" style="display:none;">
+    <div class="admin-brand">
+      <img src="/images/logo.jpg" alt="The Bead Room by Pallas" style="max-width:180px; height:auto; border-radius:8px; background:#ffffff; padding:4px;">
+    </div>
+
+    <ul class="admin-nav">
+      <li class="admin-nav-item active" data-tab="overview">
+        <span>📊</span>
+        <span>Overview</span>
+      </li>
+      <li class="admin-nav-item" data-tab="products">
+        <span>🌸</span>
+        <span>Products & Workshops</span>
+      </li>
+      <li class="admin-nav-item" data-tab="enquiries">
+        <span>💌</span>
+        <span>Inquiries & Leads</span>
+        <span class="admin-nav-badge" id="nav-enquiries-badge" style="display:none;">0</span>
+      </li>
+      <li class="admin-nav-item" data-tab="orders">
+        <span>📦</span>
+        <span>Orders & Shipping</span>
+      </li>
+      <li class="admin-nav-item" data-tab="settings">
+        <span>⚙️</span>
+        <span>Email & Store Config</span>
+      </li>
+    </ul>
+
+    <div class="admin-sidebar-footer">
+      <a href="/" class="btn-view-store" target="_blank">
+        <span>↗</span>
+        <span>View Live Storefront</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="admin-main" id="admin-main" style="display:none;">
+    <!-- Topbar -->
+    <header class="admin-topbar">
+      <div class="admin-page-title">
+        <h2>The Bead Room by Pallas - Management Portal</h2>
+        <p>Studio: 107, Amba Appts., Surendranagar, Nagpur | Owner: <strong>sarakamdar26@gmail.com</strong></p>
+      </div>
+
+      <div class="admin-top-actions">
+        <button class="btn-admin-action" onclick="openAddProductModal()">
+          <span>+</span>
+          <span>Add New Item</span>
+        </button>
+        <button class="btn-table-sm" onclick="logoutAdmin()" style="padding:10px 16px; background:#fee2e2; color:#991b1b; border-color:#fecaca; font-weight:bold;">
+          🚪 Logout
+        </button>
+      </div>
+    </header>
+
+    <div class="admin-body">
+
+      <!-- ================= TAB 1: OVERVIEW ================= -->
+      <section class="tab-panel active" id="tab-overview">
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-info">
+              <h6>Total Revenue</h6>
+              <h3 id="stat-total-revenue">₹0</h3>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📦</div>
+            <div class="stat-info">
+              <h6>Total Orders</h6>
+              <h3 id="stat-total-orders">0</h3>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌸</div>
+            <div class="stat-info">
+              <h6>Products & Workshops</h6>
+              <h3 id="stat-total-products">0</h3>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💌</div>
+            <div class="stat-info">
+              <h6>Customer Inquiries</h6>
+              <h3 id="stat-total-enquiries">0</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Summary Card -->
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <h3>🌸 Store Status & Quick Actions</h3>
+            <span class="status-badge active">● Backend Active & Synced</span>
+          </div>
+          <p style="color:var(--admin-text-muted); font-size:0.92rem; line-height:1.6;">
+            Welcome to the management control center for <strong>The Bead Room by Pallas</strong>. Here you can upload new handcrafted jewelry pieces, create weekend art workshop sessions in Surendranagar, Nagpur, manage customer inquiries sent to <strong>sarakamdar26@gmail.com</strong>, and process pan-India orders.
+          </p>
+          <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap;">
+            <button class="btn-table-sm" onclick="document.querySelector('[data-tab=products]').click(); openAddProductModal();" style="padding:10px 18px;">+ Upload New Jewellery</button>
+            <button class="btn-table-sm" onclick="document.querySelector('[data-tab=enquiries]').click();" style="padding:10px 18px;">💌 View Recent Inquiries</button>
+            <button class="btn-table-sm" onclick="document.querySelector('[data-tab=settings]').click();" style="padding:10px 18px;">⚙️ Configure Email / SMTP</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 2: PRODUCTS & WORKSHOPS ================= -->
+      <section class="tab-panel" id="tab-products">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <h3>🌸 Product Catalog & Workshop Sessions</h3>
+            <button class="btn-admin-action" onclick="openAddProductModal()">
+              <span>+ Add New Item</span>
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Title & Category</th>
+                  <th>Price (₹)</th>
+                  <th>Stock / Seats</th>
+                  <th>Status</th>
+                  <th>Badge</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="products-table-body">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 3: INQUIRIES & LEADS ================= -->
+      <section class="tab-panel" id="tab-enquiries">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h3>💌 Customer Inquiries & Workshop Bookings</h3>
+              <p style="font-size:0.85rem; color:var(--admin-text-muted);">All inquiries sent from the website are stored here and dispatched to <strong>sarakamdar26@gmail.com</strong>.</p>
+            </div>
+            <button class="btn-table-sm" onclick="refreshAdminData()">🔄 Refresh Inbox</button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Customer Info</th>
+                  <th>Subject / Item</th>
+                  <th>Message & Custom Specs</th>
+                  <th>Contact Pref</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="enquiries-table-body">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 4: ORDERS & SHIPPING ================= -->
+      <section class="tab-panel" id="tab-orders">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h3>📦 Customer Orders & Pan-India Shipments</h3>
+              <p style="font-size:0.85rem; color:var(--admin-text-muted);">Track placed orders, shipping addresses across India, and update delivery status.</p>
+            </div>
+            <button class="btn-table-sm" onclick="refreshAdminData()">🔄 Refresh Orders</button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer & Address</th>
+                  <th>Ordered Items</th>
+                  <th>Total Amount</th>
+                  <th>Shipping Status</th>
+                  <th>Order State</th>
+                </tr>
+              </thead>
+              <tbody id="orders-table-body">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 5: SETTINGS & EMAIL ================= -->
+      <section class="tab-panel" id="tab-settings">
+        <div class="settings-grid">
+          <!-- Store Details -->
+          <div class="admin-card">
+            <h3 style="margin-bottom:16px;">🌸 Store Profile & Contact Details</h3>
+            <form id="settings-form">
+              <div class="form-group">
+                <label class="form-label">Store Brand Name</label>
+                <input type="text" id="set-store-name" class="form-control" value="The Bead Room by Pallas" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Inquiry Notification Email (Store Owner) *</label>
+                <input type="email" id="set-email" class="form-control" value="sarakamdar26@gmail.com" required>
+                <small style="color:var(--admin-text-muted); font-size:0.78rem;">All customer inquiries and order receipts will be delivered to this email.</small>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Studio Address (Nagpur)</label>
+                <input type="text" id="set-address" class="form-control" value="107, Amba Appts., Surendranagar, Nagpur" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Contact / WhatsApp Number</label>
+                <input type="text" id="set-phone" class="form-control" value="+91 98230 45678" required>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                <div class="form-group">
+                  <label class="form-label">Shipping Fee (₹)</label>
+                  <input type="number" id="set-shipping-fee" class="form-control" value="79" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Free Shipping Minimum (₹)</label>
+                  <input type="number" id="set-free-shipping" class="form-control" value="999" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-admin-action" style="width:100%; justify-content:center; margin-top:10px;">
+                Save Store Settings 🌸
+              </button>
+            </form>
+          </div>
+
+          <!-- Email / SMTP Configuration -->
+          <div class="admin-card">
+            <h3 style="margin-bottom:16px;">📧 Email Dispatcher & SMTP Settings</h3>
+            <p style="font-size:0.85rem; color:var(--admin-text-muted); margin-bottom:16px;">
+              Configure your SMTP mail credentials (Gmail, Outlook, Hostinger, AWS SES, SendGrid) to send live emails. If left blank, emails are automatically logged to the outbox preview folder!
+            </p>
+
+            <div class="form-group">
+              <label class="form-label">SMTP Host</label>
+              <input type="text" id="smtp-host" class="form-control" placeholder="smtp.gmail.com">
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+              <div class="form-group">
+                <label class="form-label">SMTP Port</label>
+                <input type="number" id="smtp-port" class="form-control" value="587">
+              </div>
+              <div class="form-group" style="display:flex; align-items:center; gap:8px; margin-top:24px;">
+                <input type="checkbox" id="smtp-secure">
+                <label for="smtp-secure" style="font-size:0.85rem; font-weight:700;">Use SSL / TLS</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">SMTP Username / Email</label>
+              <input type="text" id="smtp-user" class="form-control" placeholder="sarakamdar26@gmail.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">SMTP Password / App Password</label>
+              <input type="password" id="smtp-pass" class="form-control" placeholder="App password from Google / Provider">
+            </div>
+
+            <div style="display:flex; gap:12px; margin-top:20px;">
+              <button type="button" id="btn-test-email" onclick="sendTestEmail()" class="btn-table-sm" style="flex:1; padding:12px; font-weight:bold; background:#fdf2f4; color:#be185d; border-color:#fbcfe8;">
+                ⚡ Send Test Email
+              </button>
+            </div>
+
+            <div id="email-test-result" style="margin-top:16px; display:none;"></div>
+          </div>
+
+          <!-- Change Password Card -->
+          <div class="admin-card" style="grid-column: 1 / -1; margin-top:10px;">
+            <h3 style="margin-bottom:8px;">🔐 Change Admin Login Password</h3>
+            <p style="font-size:0.85rem; color:var(--admin-text-muted); margin-bottom:16px;">Update your login password for accessing the admin management portal.</p>
+            <form id="change-password-form" style="max-width:500px;">
+              <div class="form-group">
+                <label class="form-label">Current Password *</label>
+                <input type="password" id="pass-current" class="form-control" required placeholder="Enter current password">
+              </div>
+              <div class="form-group">
+                <label class="form-label">New Password *</label>
+                <input type="password" id="pass-new" class="form-control" required placeholder="Enter new password">
+              </div>
+              <button type="submit" id="btn-change-pass" class="btn-admin-action" style="padding:10px 20px;">
+                Update Password 🔑
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Add / Edit Product Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-box" style="max-width:680px;">
+      <button class="modal-close-btn" onclick="closeModal('product-modal')">✕</button>
+      <h3 class="modal-title" id="product-modal-title">🌸 Add New Product or Workshop</h3>
+      <p class="modal-subtitle">Fill in details and upload an image to publish directly to the storefront catalog.</p>
+
+      <form id="product-form">
+        <!-- Image Upload Area -->
+        <label class="form-label">Product / Workshop Image *</label>
+        <div class="dropzone-box" id="image-dropzone">
+          <div style="font-size:2rem; margin-bottom:8px;">📸</div>
+          <div style="font-weight:700; color:var(--admin-accent);">Drag & Drop Product Image here or click to browse</div>
+          <div style="font-size:0.78rem; color:#64748b; margin-top:4px;">Supports JPG, PNG, WEBP files</div>
+          <input type="file" id="product-image-file" style="display:none;" accept="image/*">
+        </div>
+
+        <div id="image-preview-container" class="preview-image-container" style="display:none; margin-bottom:16px;">
+          <img id="image-preview-thumb" src="" class="preview-thumb">
+          <div>
+            <div style="font-size:0.85rem; font-weight:700; color:#059669;">✓ Image ready for upload</div>
+            <div style="font-size:0.75rem; color:#64748b;">Will be saved to server uploads directory</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Or Image URL (Unsplash / Hosted)</label>
+          <input type="url" id="prod-image-url" class="form-control" placeholder="https://images.unsplash.com/...">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Product / Workshop Title *</label>
+          <input type="text" id="prod-name" class="form-control" placeholder="e.g. Pastel Bloom Daisy Choker" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label class="form-label">Category *</label>
+            <select id="prod-category" class="form-control" required>
+              <option value="Necklaces">Necklaces</option>
+              <option value="Bracelets">Bracelets</option>
+              <option value="Accessories">Accessories & Phone Charms</option>
+              <option value="Rings & Charms">Rings & Charms</option>
+              <option value="Art Workshops">Art Workshops (Nagpur)</option>
+              <option value="DIY Craft Kits">DIY Craft Kits</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Item Type *</label>
+            <select id="prod-type" class="form-control" required>
+              <option value="jewellery">🌸 Handcrafted Jewellery (Pan-India Shipping)</option>
+              <option value="workshop">🎨 Art Workshop (Surendranagar, Nagpur)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label class="form-label">Selling Price (₹) *</label>
+            <input type="number" id="prod-price" class="form-control" placeholder="899" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Original Price (₹)</label>
+            <input type="number" id="prod-original-price" class="form-control" placeholder="1199">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Stock / Seats *</label>
+            <input type="number" id="prod-stock" class="form-control" value="10" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Badge Tag (e.g. Bestseller, Limited Edition, New Drop, Nagpur Workshop)</label>
+          <input type="text" id="prod-badge" class="form-control" placeholder="Bestseller">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Description & Materials / Inclusions *</label>
+          <textarea id="prod-desc" class="form-control" placeholder="Describe the handcrafted beads, clasp details, dimensions, or workshop timings..." required></textarea>
+        </div>
+
+        <button type="submit" id="btn-save-product" class="btn-admin-action" style="width:100%; justify-content:center; padding:14px;">
+          Save Product 🌸
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/mock-data.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

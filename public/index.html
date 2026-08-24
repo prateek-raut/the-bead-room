@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bead Room by Pallas | Handcrafted Jewellery & Art Workshops in Nagpur</title>
+  <meta name="description" content="Handcrafted beaded jewellery with pan-India delivery, and curated art workshops in Surendranagar, Nagpur. Shop unique handmade necklaces, bracelets, rings & book creative sessions.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>🌸 Handcrafted Jewellery with <strong>Pan-India Delivery</strong> &nbsp;|&nbsp; 🎨 Curated Art Workshops at <strong>Surendranagar, Nagpur</strong></span>
+    <a href="#workshops">Explore Workshops →</a>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" id="nav-logo">
+        <img src="/images/logo.jpg" alt="The Bead Room by Pallas Logo" class="brand-logo-img">
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#catalog" class="nav-link">Jewellery 🌸</a></li>
+          <li><a href="#workshops" class="nav-link">Art Workshops 🎨</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact & Inquire</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Wishlist -->
+        <button class="action-btn" id="wishlist-btn" title="Wishlist" onclick="showToast('Your saved favorites 💖', 'info')">
+          <span>💖</span>
+          <span class="badge-count" id="wishlist-badge-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Cart Drawer Toggle -->
+        <button class="action-btn" id="cart-toggle-btn" title="Shopping Cart">
+          <span>🛍️</span>
+          <span class="badge-count" id="cart-badge-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span>✨</span> Handcrafted with Love & Curated in Nagpur
+        </div>
+        <h1 class="hero-title">
+          Handmade <span>Beaded Jewels</span> & Creative <span>Art Sessions</span>
+        </h1>
+        <p class="hero-description">
+          At <strong>The Bead Room by Pallas</strong>, we create whimsical, custom handcrafted jewellery delivered across India, and host fun, relaxing weekend art & craft workshops in Surendranagar, Nagpur!
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#catalog" class="btn-primary">
+            <span>Shop Jewellery 🌸</span>
+          </a>
+          <a href="#workshops" class="btn-secondary">
+            <span>Book Art Workshop 🎨</span>
+          </a>
+        </div>
+
+        <div class="hero-badges-row">
+          <div class="hero-badge-item">
+            <div class="hero-badge-icon">📦</div>
+            <div class="hero-badge-text">
+              <h4>Pan-India Delivery</h4>
+              <p>Safe & fast door delivery</p>
+            </div>
+          </div>
+          <div class="hero-badge-item">
+            <div class="hero-badge-icon">🎨</div>
+            <div class="hero-badge-text">
+              <h4>Nagpur Studio</h4>
+              <p>Surendranagar workshops</p>
+            </div>
+          </div>
+          <div class="hero-badge-item">
+            <div class="hero-badge-icon">✨</div>
+            <div class="hero-badge-text">
+              <h4>100% Handcrafted</h4>
+              <p>Original artisan designs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media-wrapper">
+        <div class="hero-image-card">
+          <img src="/images/hero_banner.jpg" alt="The Bead Room by Pallas Handcrafted Jewellery and Workshops">
+          
+          <div class="floating-glass-card">
+            <div class="floating-glass-icon">🌸</div>
+            <div class="floating-glass-info">
+              <h5>Custom Bridal & Gift Orders</h5>
+              <p>Direct inquiries to sarakamdar26@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Highlight Section -->
+  <section class="features-section">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-box">🌸</div>
+        <div class="feature-info">
+          <h4>Handmade Jewellery</h4>
+          <p>Dainty chokers, beaded stacks, phone charms & rings crafted bead-by-bead.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">🎨</div>
+        <div class="feature-info">
+          <h4>Nagpur Art Workshops</h4>
+          <p>Fun, relaxed creative sessions in Surendranagar where you make & take home art.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">✈️</div>
+        <div class="feature-info">
+          <h4>Pan-India Shipping</h4>
+          <p>Delivering aesthetic handmade pieces safely to every pincode in India.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">💌</div>
+        <div class="feature-info">
+          <h4>Custom Requests</h4>
+          <p>Personalized color palettes, sizing, bridal favors & private party bookings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog Section -->
+  <section class="catalog-section" id="catalog">
+    <div class="section-header">
+      <span class="section-tag">Our Collection & Experiences</span>
+      <h2 class="section-title">Explore Handcrafted Treasures & Workshops</h2>
+      <p class="section-subtitle">Browse through our handmade jewellery drops or reserve your seat for upcoming creative art sessions in Nagpur.</p>
+    </div>
+
+    <!-- Filter & Search Controls Bar -->
+    <div class="catalog-controls">
+      <div class="category-pills-wrapper">
+        <button class="cat-pill active" data-category="All">🌸 All Items</button>
+        <button class="cat-pill" data-category="Necklaces">✨ Necklaces & Chokers</button>
+        <button class="cat-pill" data-category="Bracelets">💫 Bracelets & Stacks</button>
+        <button class="cat-pill" data-category="Accessories">📱 Phone Charms & Straps</button>
+        <button class="cat-pill" data-category="Rings & Charms">💍 Rings & Charms</button>
+        <button class="cat-pill" data-category="Art Workshops">🎨 Nagpur Art Workshops</button>
+        <button class="cat-pill" data-category="DIY Craft Kits">🎁 DIY Craft Kits</button>
+      </div>
+
+      <div class="filter-search-row">
+        <div class="search-input-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Search daisy necklace, bracelets, workshop...">
+        </div>
+
+        <select id="sort-select" class="sort-select">
+          <option value="featured">✨ Featured Collection</option>
+          <option value="newest">🕒 Newest Drops</option>
+          <option value="price-low">💰 Price: Low to High</option>
+          <option value="price-high">💎 Price: High to Low</option>
+          <option value="rating">★ Highest Customer Rating</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="products-grid">
+      <!-- Dynamically populated by app.js -->
+    </div>
+  </section>
+
+  <!-- Nagpur Art Workshops Spotlight Section -->
+  <section class="workshops-showcase" id="workshops">
+    <div class="workshop-banner-box">
+      <div class="workshop-banner-info">
+        <div class="workshop-venue-pill">
+          <span>📍</span> Studio Venue: 107, Amba Appts., Surendranagar, Nagpur
+        </div>
+        <h2 class="workshop-banner-title">
+          Curated Art Workshops in Nagpur 🎨
+        </h2>
+        <p style="color:var(--text-muted); font-size:1rem; line-height:1.6;">
+          Looking for a fun, relaxed weekend experience in Nagpur? Join our intimate creative sessions where you learn jewellery design, resin art, floral preservation, and take home your own handcrafted masterpieces!
+        </p>
+
+        <ul class="workshop-points-list">
+          <li class="workshop-point-item">
+            <span class="workshop-point-icon">✓</span>
+            <span><strong>All Materials Included:</strong> Premium beads, UV resin, findings, pliers & kits provided.</span>
+          </li>
+          <li class="workshop-point-item">
+            <span class="workshop-point-icon">✓</span>
+            <span><strong>No Experience Needed:</strong> Guided step-by-step for beginners, teens, and adults.</span>
+          </li>
+          <li class="workshop-point-item">
+            <span class="workshop-point-icon">✓</span>
+            <span><strong>Take Everything Home:</strong> Wear your creations & receive a DIY starter pack!</span>
+          </li>
+          <li class="workshop-point-item">
+            <span class="workshop-point-icon">✓</span>
+            <span><strong>Private Group Bookings:</strong> Available for birthdays, bachelorettes & team outings.</span>
+          </li>
+        </ul>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+          <button onclick="openEnquiryModal()" class="btn-primary">
+            <span>Book a Seat / Private Session 🎨</span>
+          </button>
+          <a href="mailto:sarakamdar26@gmail.com?subject=Workshop Inquiry - Nagpur" class="btn-secondary">
+            <span>Email Studio 💌</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="workshop-banner-media">
+        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Creative Art Workshop in Nagpur">
+      </div>
+    </div>
+  </section>
+
+  <!-- About The Bead Room by Pallas -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-media-collage">
+        <img src="/images/necklace_floral.jpg" alt="Artisan Beaded Jewelry Craft" class="about-main-img">
+        <div class="about-floating-stamp">
+          <span>ESTD</span>
+          <span>NAGPUR</span>
+          <span>100% HANDMADE</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-tag">Behind The Craft</span>
+        <h2 class="section-title">The Bead Room by Pallas</h2>
+        <p class="about-text">
+          Founded with a deep love for tactile creativity and aesthetic design, <strong>The Bead Room by Pallas</strong> is dedicated to two joyful missions: creating charming, delicate handcrafted jewellery that brings everyday magic, and creating a warm community space in Nagpur where anyone can unlock their artistic side.
+        </p>
+        <p class="about-text">
+          Whether you're shopping for something handmade to brighten your style or looking for a memorable weekend experience in Nagpur, we've got you ✨️
+        </p>
+
+        <div class="about-details-card">
+          <div class="about-detail-item">
+            <h5>Studio Location</h5>
+            <p>107, Amba Appts., Surendranagar, Nagpur</p>
+          </div>
+          <div class="about-detail-item">
+            <h5>Inquiry Email</h5>
+            <p>sarakamdar26@gmail.com</p>
+          </div>
+          <div class="about-detail-item">
+            <h5>Shipping Reach</h5>
+            <p>Pan-India Delivery for all Jewellery</p>
+          </div>
+          <div class="about-detail-item">
+            <h5>Customization</h5>
+            <p>Custom colors, bridal sets & party orders</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews & Testimonials -->
+  <section class="testimonials-section" id="reviews">
+    <div class="section-header">
+      <span class="section-tag">Loved by Customers</span>
+      <h2 class="section-title">Kind Words & Workshop Memories</h2>
+      <p class="section-subtitle">Real experiences from our jewelry buyers across India and workshop attendees in Nagpur.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"The Daisy Pearl choker is even more beautiful in person! The craftsmanship is so intricate, and the gold clasp is top quality. Delivered to Mumbai in 3 days with gorgeous packaging!"</p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">R</div>
+          <div>
+            <div class="reviewer-name">Rhea Singhania</div>
+            <div class="reviewer-tag">Mumbai • Verified Buyer 🌸</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Attended the weekend beading workshop at Surendranagar, Nagpur with my sister. Sara is such a patient and lovely instructor! We made 2 necklaces and a bracelet stack. Best Sunday afternoon ever!"</p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">T</div>
+          <div>
+            <div class="reviewer-name">Tanvi Deshmukh</div>
+            <div class="reviewer-tag">Nagpur • Workshop Participant 🎨</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Ordered 6 matching custom floral bracelets as bridesmaid favors. Sara customized the colors to match our pastel lehengas perfectly. Everyone adored them!"</p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <div class="reviewer-name">Aarushi Kapoor</div>
+            <div class="reviewer-tag">Delhi • Custom Order 💖</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="faq-section" id="faq">
+    <div class="section-header">
+      <span class="section-tag">Got Questions?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>How does Pan-India delivery work for jewellery?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          We ship across all pin codes in India via reliable courier partners. Handcrafted orders are packaged safely in protective pouches and dispatched within 1-2 days, reaching you in 3-5 business days. Free shipping is automatically applied on orders above ₹999!
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Where are the art workshops conducted in Nagpur?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Our workshops are hosted at our studio located at <strong>107, Amba Appts., Surendranagar, Nagpur</strong>. It is a cozy, relaxing creative environment equipped with all crafting tools, materials, and refreshments.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can I request custom colors or customized jewellery sizes?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes, absolutely! You can click the "Enquire" button on any product or submit the inquiry form below with your custom color scheme, wrist/neck measurements, or bridal party requirements.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I book a private workshop for a birthday or party?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          We love hosting private groups (bachelorettes, birthdays, creative hangouts). Simply submit an inquiry with your preferred weekend date and group size, or email us at <strong>sarakamdar26@gmail.com</strong>.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Direct Inquiry Section -->
+  <section class="contact-section" id="contact" style="background:var(--bg-secondary); padding:80px 24px; border-top:1px solid var(--border-soft);">
+    <div class="section-header">
+      <span class="section-tag">Get in Touch</span>
+      <h2 class="section-title">Send Us an Inquiry or Custom Request</h2>
+      <p class="section-subtitle">Have a custom jewellery request, order question, or workshop query? Fill out the form below to send an instant email to Sara at <strong>sarakamdar26@gmail.com</strong>.</p>
+    </div>
+
+    <div style="max-width:680px; margin:0 auto; background:#ffffff; border-radius:24px; padding:36px; border:1px solid var(--border-soft); box-shadow:var(--shadow-md);">
+      <form id="enquiry-form">
+        <div id="enquiry-product-preview" style="display:none; align-items:center; gap:14px; background:#fdf2f4; padding:12px 16px; border-radius:12px; margin-bottom:20px;"></div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label class="form-label" for="enquiry-name">Your Full Name *</label>
+            <input type="text" id="enquiry-name" class="form-control" placeholder="e.g. Pooja Sharma" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="enquiry-email">Your Email Address *</label>
+            <input type="email" id="enquiry-email" class="form-control" placeholder="pooja@example.com" required>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label class="form-label" for="enquiry-phone">WhatsApp / Phone Number *</label>
+            <input type="tel" id="enquiry-phone" class="form-control" placeholder="+91 98230 XXXXX" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="enquiry-contact-pref">Preferred Contact Mode</label>
+            <select id="enquiry-contact-pref" class="form-control">
+              <option value="WhatsApp">💬 WhatsApp</option>
+              <option value="Email">📧 Email</option>
+              <option value="Phone Call">📞 Phone Call</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="enquiry-subject">Subject / Purpose *</label>
+          <input type="text" id="enquiry-subject" class="form-control" placeholder="Custom Jewellery Order / Nagpur Workshop Booking" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="enquiry-message">Your Message / Specific Requirements *</label>
+          <textarea id="enquiry-message" class="form-control" placeholder="Tell us about your custom design, color preferences, sizing, or workshop dates..." required></textarea>
+        </div>
+
+        <button type="submit" id="btn-submit-enquiry" class="btn-primary" style="width:100%; justify-content:center; padding:16px;">
+          <span>Send Enquiry to sarakamdar26@gmail.com ✨</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>🌸 The Bead Room by Pallas</h3>
+        <p>Handcrafted beaded jewellery with pan-India delivery, and curated art workshops in Surendranagar, Nagpur where you create and take home something beautiful ✨</p>
+        <p style="margin-top:14px; color:#f472b6; font-weight:700;">Delivery: Pan-India | Workshops: Nagpur</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog">Handcrafted Jewellery</a></li>
+          <li><a href="#workshops">Nagpur Art Workshops</a></li>
+          <li><a href="#about">About Pallas</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog" onclick="resetFilters()">Beaded Chokers & Necklaces</a></li>
+          <li><a href="#catalog" onclick="resetFilters()">Charm Bracelets & Stacks</a></li>
+          <li><a href="#catalog" onclick="resetFilters()">Y2K Phone Charms</a></li>
+          <li><a href="#catalog" onclick="resetFilters()">DIY Jewellery Kits</a></li>
+          <li><a href="#workshops">Weekend Masterclasses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact & Studio</h4>
+        <div class="footer-contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span>107, Amba Appts., Surendranagar, Nagpur, MH - 440033</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span>sarakamdar26@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💬</span>
+            <span>WhatsApp / Phone: +91 98230 45678</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 The Bead Room by Pallas. All rights reserved. Handcrafted with love in Nagpur 🌸</div>
+      <div>
+        <a href="#contact" style="color:#cbd5e1;">Custom Enquiries</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><span>🛍️</span> Your Shopping Bag</h3>
+      <button class="modal-close-btn" id="close-cart-btn" style="position:static;">✕</button>
+    </div>
+
+    <div class="cart-shipping-meter">
+      <span id="free-shipping-text">Add ₹999 for FREE Pan-India Delivery!</span>
+      <div class="meter-bar">
+        <div class="meter-fill" id="free-shipping-fill"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-body" id="cart-items-list">
+      <!-- Populated dynamically -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="coupon-row">
+        <input type="text" id="coupon-input" class="coupon-input" placeholder="Promo code (e.g. BEADLOVE10)">
+        <button onclick="applyCoupon()" class="btn-secondary" style="padding:8px 16px; font-size:0.85rem;">Apply</button>
+      </div>
+
+      <div class="cart-totals-table">
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹0</span>
+        </div>
+        <div class="cart-total-row">
+          <span>Promo Discount</span>
+          <span id="cart-discount" style="color:var(--accent-rose);">₹0</span>
+        </div>
+        <div class="cart-total-row">
+          <span>Pan-India Shipping</span>
+          <span id="cart-shipping">₹79</span>
+        </div>
+        <div class="cart-total-row grand-total">
+          <span>Grand Total</span>
+          <span id="cart-grand-total">₹0</span>
+        </div>
+      </div>
+
+      <button id="btn-open-checkout" onclick="openCheckoutModal()" class="btn-checkout">
+        Proceed to Checkout 🌸
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-box" style="max-width:760px;">
+      <button class="modal-close-btn" onclick="closeModal('quickview-modal')">✕</button>
+      <div id="quickview-content"></div>
+    </div>
+  </div>
+
+  <!-- Separate Enquiry Modal Popup -->
+  <div class="modal-overlay" id="enquiry-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('enquiry-modal')">✕</button>
+      <h3 class="modal-title">🌸 Send an Inquiry</h3>
+      <p class="modal-subtitle">Direct message to Sara (sarakamdar26@gmail.com) for custom orders or Nagpur workshops.</p>
+      
+      <form onsubmit="handleEnquirySubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Your Name *</label>
+          <input type="text" id="modal-enq-name" class="form-control" required placeholder="Pooja Sharma">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="modal-enq-email" class="form-control" required placeholder="pooja@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone / WhatsApp Number *</label>
+          <input type="tel" id="modal-enq-phone" class="form-control" required placeholder="+91 98230 XXXXX">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input type="text" id="modal-enq-subject" class="form-control" required value="Custom Order Inquiry">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Message</label>
+          <textarea id="modal-enq-msg" class="form-control" required placeholder="Describe your preferred colors, sizing, or workshop date..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+          Send Email to sarakamdar26@gmail.com 🌸
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-box" style="max-width:560px;">
+      <button class="modal-close-btn" onclick="closeModal('checkout-modal')">✕</button>
+      <h3 class="modal-title">🌸 Secure Checkout</h3>
+      <p class="modal-subtitle">Pan-India door delivery for handcrafted treasures.</p>
+
+      <div id="checkout-summary-box"></div>
+
+      <form id="checkout-form">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="checkout-name" class="form-control" placeholder="Riya Verma" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email for Receipt *</label>
+          <input type="email" id="checkout-email" class="form-control" placeholder="riya@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" id="checkout-phone" class="form-control" placeholder="+91 91234 XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Full Delivery Address (with Pincode & City) *</label>
+          <textarea id="checkout-address" class="form-control" placeholder="Flat 402, Green Meadows, Bandra West, Mumbai - 400050" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Payment Method</label>
+          <select id="checkout-payment" class="form-control">
+            <option value="UPI / GPay / PhonePe">📱 UPI / GPay / PhonePe / Paytm</option>
+            <option value="Credit / Debit Card">💳 Credit / Debit Card</option>
+            <option value="Net Banking">🏦 Net Banking</option>
+            <option value="Cash on Delivery">💵 Cash on Delivery (COD)</option>
+          </select>
+        </div>
+        <button type="submit" id="btn-submit-order" class="btn-primary" style="width:100%; justify-content:center; padding:16px;">
+          Confirm Order (Pan-India Shipping) 🌸
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Success Confirmation Modal -->
+  <div class="modal-overlay" id="order-success-modal">
+    <div class="modal-box" style="max-width:500px;">
+      <div id="order-success-details"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="/js/mock-data.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

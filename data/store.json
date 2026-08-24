@@ -1,0 +1,411 @@
+﻿{
+    "settings":  {
+                     "storeName":  "The Bead Room by Pallas",
+                     "tagline":  "Handcrafted Jewellery 🌸 \u0026 Curated Art Workshops in Nagpur 🎨",
+                     "description":  "At The Bead Room by Pallas, we craft unique handmade beaded jewellery with pan-India delivery, and host fun, relaxed creative art workshops in Nagpur where you create and take home something beautiful.",
+                     "email":  "sarakamdar26@gmail.com",
+                     "phone":  "+91 98230 45678",
+                     "address":  "107, Amba Appts., Surendranagar, Nagpur, Maharashtra - 440033",
+                     "instagram":  "@thebeadroom_bypallas",
+                     "whatsapp":  "+919823045678",
+                     "currencySymbol":  "₹",
+                     "shippingFee":  79,
+                     "freeShippingThreshold":  999,
+                     "smtp":  {
+                                  "host":  "",
+                                  "port":  587,
+                                  "secure":  false,
+                                  "user":  "",
+                                  "pass":  "",
+                                  "fromName":  "The Bead Room by Pallas",
+                                  "fromEmail":  "sarakamdar26@gmail.com"
+                              }
+                 },
+    "adminAuth":  {
+                      "email":  "sarakamdar26@gmail.com",
+                      "password":  "Pallas@123"
+                  },
+    "products":  [
+                     {
+                         "name":  "123",
+                         "category":  "Necklaces",
+                         "type":  "jewellery",
+                         "price":  899,
+                         "originalPrice":  1199,
+                         "stock":  10,
+                         "badge":  "Bestseller",
+                         "description":  "jhkhkh",
+                         "image":  "/uploads/upload-06c0ff01.jpg",
+                         "featured":  true,
+                         "id":  "prod-7e404166",
+                         "createdAt":  "2026-08-19T19:22:15Z",
+                         "rating":  5,
+                         "reviewsCount":  1
+                     },
+                     {
+                         "id":  "prod-1",
+                         "name":  "Pastel Bloom Daisy \u0026 Freshwater Pearl Choker",
+                         "category":  "Necklaces",
+                         "type":  "jewellery",
+                         "price":  899,
+                         "originalPrice":  1199,
+                         "image":  "/images/necklace_floral.jpg",
+                         "badge":  "Bestseller",
+                         "stock":  11,
+                         "rating":  4.9,
+                         "reviewsCount":  38,
+                         "description":  "Exquisite handmade choker combining delicate pastel pink \u0026 lavender glass seed beads, woven daisy florals, and genuine organic freshwater pearls. Finished with 18k gold-plated hypoallergenic lobster clasp and extension chain.",
+                         "details":  {
+                                         "materials":  "Miyuki Seed Beads, Freshwater Pearls, 18K Gold Plated Clasp",
+                                         "length":  "14 inches + 2 inch extender",
+                                         "care":  "Avoid contact with direct water, perfumes, and sprays. Store in the provided pouch.",
+                                         "delivery":  "Pan-India delivery within 3-5 business days"
+                                     },
+                         "featured":  true,
+                         "createdAt":  "2026-08-15T10:00:00Z"
+                     },
+                     {
+                         "id":  "prod-2",
+                         "name":  "Aurora Rainbow \u0026 Gold Bead Charm Bracelet Stack",
+                         "category":  "Bracelets",
+                         "type":  "jewellery",
+                         "price":  649,
+                         "originalPrice":  850,
+                         "image":  "/images/bracelet_stack.jpg",
+                         "badge":  "Trending",
+                         "stock":  20,
+                         "rating":  5.0,
+                         "reviewsCount":  42,
+                         "description":  "A radiant stack of 3 coordinating handcrafted elastic bracelets featuring pastel candy beads, 18k gold spacer accents, and whimsical heart \u0026 butterfly charms. Elastic stretch fits most wrist sizes comfortably.",
+                         "details":  {
+                                         "materials":  "Czech Crystal Beads, Acrylic Charms, 18K Gold Brass Spacers",
+                                         "size":  "Standard 6.5 - 7.0 inch stretch",
+                                         "care":  "Wipe gently with soft cloth after wear.",
+                                         "delivery":  "Pan-India delivery within 3-5 business days"
+                                     },
+                         "featured":  true,
+                         "createdAt":  "2026-08-16T12:00:00Z"
+                     },
+                     {
+                         "id":  "prod-3",
+                         "name":  "Celestial Starlight Beaded Lariat Necklace",
+                         "category":  "Necklaces",
+                         "type":  "jewellery",
+                         "price":  799,
+                         "originalPrice":  999,
+                         "image":  "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+                         "badge":  "New Drop",
+                         "stock":  9,
+                         "rating":  4.8,
+                         "reviewsCount":  19,
+                         "description":  "A dainty lariat-style necklace featuring shimmering midnight blue and champagne seed beads, punctuated with micro starburst charms. Elegant for both daily wear and special evenings.",
+                         "details":  {
+                                         "materials":  "Glass Seed Beads, Gold Plated Star Charms",
+                                         "length":  "16 inches with 2 inch drop",
+                                         "care":  "Keep dry and store separately.",
+                                         "delivery":  "Pan-India delivery within 3-5 business days"
+                                     },
+                         "featured":  true,
+                         "createdAt":  "2026-08-17T09:00:00Z"
+                     },
+                     {
+                         "id":  "prod-4",
+                         "name":  "Aesthetic Pastel Phone Charm \u0026 Wristlet",
+                         "category":  "Accessories",
+                         "type":  "jewellery",
+                         "price":  349,
+                         "originalPrice":  499,
+                         "image":  "https://images.unsplash.com/photo-1611591475155-4286fa7c2e7f?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+                         "badge":  "Popular",
+                         "stock":  35,
+                         "rating":  4.9,
+                         "reviewsCount":  56,
+                         "description":  "Add whimsical charm to your phone with this sturdy handcrafted beaded wristlet. Featuring smileys, daisy beads, imitation pearls, and durable cord that loops onto any phone case.",
+                         "details":  {
+                                         "materials":  "High-durability nylon cord, acrylic \u0026 glass beads",
+                                         "length":  "7.5 inches loop",
+                                         "compatibility":  "Universal - fits all phone cases with lanyard holes or mute switch cutouts",
+                                         "delivery":  "Pan-India delivery within 3-5 business days"
+                                     },
+                         "featured":  true,
+                         "createdAt":  "2026-08-14T11:00:00Z"
+                     },
+                     {
+                         "id":  "prod-5",
+                         "name":  "Dainty Floral Beaded Ring Set (Trio Pack)",
+                         "category":  "Rings \u0026 Charms",
+                         "type":  "jewellery",
+                         "price":  299,
+                         "originalPrice":  450,
+                         "image":  "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+                         "badge":  "Budget Favorite",
+                         "stock":  25,
+                         "rating":  4.7,
+                         "reviewsCount":  27,
+                         "description":  "Set of three delicate woven beaded rings with dainty floral motifs in blush pink, mint green, and ivory pearl. Elastic fit for effortless stacking across fingers.",
+                         "details":  {
+                                         "materials":  "Micro Glass Seed Beads, Durable Elastic Thread",
+                                         "sizes":  "US 6-8 flexible stretch",
+                                         "care":  "Roll on and off fingers gently.",
+                                         "delivery":  "Pan-India delivery within 3-5 business days"
+                                     },
+                         "featured":  false,
+                         "createdAt":  "2026-08-12T14:00:00Z"
+                     },
+                     {
+                         "id":  "prod-6",
+                         "name":  "Sunset Gradient Glass Bead Anklet",
+                         "category":  "Bracelets",
+                         "type":  "jewellery",
+                         "price":  499,
+                         "originalPrice":  650,
+                         "image":  "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+                         "badge":  "Limited Edition",
+                         "stock":  11,
+                         "rating":  4.9,
+                         "reviewsCount":  23,
+                         "description":  "Capturing golden hour vibes with a warm gradient of coral, amber, and gold glass beads. Water-resistant and crafted with waterproof coated wire for beach and summer outings.",
+                         "details":  {
+                                         "materials":  "Coated Stainless Wire, Glass Beads, Brass Clasp",
+                                         "length":  "9 inches + 1.5 inch extender",
+                                         "care":  "Rinse with clean water if exposed to salt or chlorine.",
+                                         "delivery":  "Pan-India delivery within 3-5 business days"
+                                     },
+                         "featured":  false,
+                         "createdAt":  "2026-08-13T16:00:00Z"
+                     },
+                     {
+                         "id":  "prod-7",
+                         "name":  "Nagpur Weekend Beading \u0026 Jewellery Masterclass",
+                         "category":  "Art Workshops",
+                         "type":  "workshop",
+                         "price":  1299,
+                         "originalPrice":  1599,
+                         "image":  "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+                         "badge":  "Nagpur Workshop",
+                         "stock":  8,
+                         "rating":  5.0,
+                         "reviewsCount":  64,
+                         "description":  "Join our fun, relaxed 3-hour weekend creative session at Surendranagar, Nagpur! Learn floral beading techniques, design your own necklace and bracelet stack, and take home everything you make along with a starter beading kit.",
+                         "details":  {
+                                         "venue":  "107, Amba Appts., Surendranagar, Nagpur",
+                                         "duration":  "3 Hours (Saturday / Sunday, 3:00 PM - 6:00 PM)",
+                                         "inclusions":  "All premium beads, tools, findings, snacks \u0026 refreshments, certificate of participation",
+                                         "level":  "Complete Beginners \u0026 Craft Enthusiasts Welcome (Ages 12+)"
+                                     },
+                         "featured":  true,
+                         "createdAt":  "2026-08-18T10:00:00Z"
+                     },
+                     {
+                         "id":  "prod-8",
+                         "name":  "Resin Floral Jewellery \u0026 Keychain Workshop",
+                         "category":  "Art Workshops",
+                         "type":  "workshop",
+                         "price":  1499,
+                         "originalPrice":  1800,
+                         "image":  "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+                         "badge":  "Nagpur Workshop",
+                         "stock":  6,
+                         "rating":  4.9,
+                         "reviewsCount":  31,
+                         "description":  "A hands-on creative session in Nagpur where you preserve real dried botanical flowers into crystal-clear UV resin jewellery pendants, earrings, and custom monogram keychains.",
+                         "details":  {
+                                         "venue":  "107, Amba Appts., Surendranagar, Nagpur",
+                                         "duration":  "2.5 Hours (Sunday 11:00 AM - 1:30 PM)",
+                                         "inclusions":  "UV Resin, UV lamps, real pressed flowers, silicone molds, metal bezels, refreshments",
+                                         "level":  "Beginner friendly, no prior experience needed"
+                                     },
+                         "featured":  true,
+                         "createdAt":  "2026-08-18T11:00:00Z"
+                     },
+                     {
+                         "id":  "prod-9",
+                         "name":  "DIY Starter Beading \u0026 Jewellery Craft Kit",
+                         "category":  "DIY Craft Kits",
+                         "type":  "jewellery",
+                         "price":  999,
+                         "originalPrice":  1299,
+                         "image":  "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+                         "badge":  "All-in-One Box",
+                         "stock":  18,
+                         "rating":  4.8,
+                         "reviewsCount":  17,
+                         "description":  "Everything you need to create 8+ custom beaded necklaces, bracelets, and rings at home! Includes 18-grid organizer with 2000+ pastel seed beads, freshwater pearls, smiley charms, elastic cords, clasps, pliers \u0026 step-by-step video guide.",
+                         "details":  {
+                                         "boxContents":  "2000+ Beads, 10 Clasps, 2 Rolls Elastic, Jewelry Plier, Video Tutorial Access",
+                                         "delivery":  "Pan-India delivery within 3-5 business days"
+                                     },
+                         "featured":  false,
+                         "createdAt":  "2026-08-17T15:00:00Z"
+                     }
+                 ],
+    "enquiries":  [
+                      {
+                          "name":  "Kavita Singhal",
+                          "subject":  "Custom Beaded Bracelet Order",
+                          "phone":  "+91 99887 76655",
+                          "preferredContact":  "WhatsApp",
+                          "email":  "kavita.s@example.com",
+                          "productName":  "Aurora Rainbow Charm Bracelet Stack",
+                          "message":  "Hi Sara, would love to order 3 customized matching rainbow charm stacks for a college reunion!",
+                          "id":  "enq-f326fbe6",
+                          "status":  "New",
+                          "createdAt":  "2026-08-23T13:54:22Z"
+                      },
+                      {
+                          "name":  "Kavita Singhal",
+                          "subject":  "Custom Beaded Bracelet Order",
+                          "phone":  "+91 99887 76655",
+                          "preferredContact":  "WhatsApp",
+                          "email":  "kavita.s@example.com",
+                          "productName":  "Aurora Rainbow Charm Bracelet Stack",
+                          "message":  "Hi Sara, would love to order 3 customized matching rainbow charm stacks for a college reunion!",
+                          "id":  "enq-ad18568e",
+                          "status":  "New",
+                          "createdAt":  "2026-08-20T11:35:16Z"
+                      },
+                      {
+                          "name":  "Kavita Singhal",
+                          "subject":  "Custom Beaded Bracelet Order",
+                          "phone":  "+91 99887 76655",
+                          "preferredContact":  "WhatsApp",
+                          "email":  "kavita.s@example.com",
+                          "productName":  "Aurora Rainbow Charm Bracelet Stack",
+                          "message":  "Hi Sara, would love to order 3 customized matching rainbow charm stacks for a college reunion!",
+                          "id":  "enq-0b3c9a68",
+                          "status":  "New",
+                          "createdAt":  "2026-08-19T19:15:34Z"
+                      },
+                      {
+                          "id":  "enq-101",
+                          "name":  "Pooja Sharma",
+                          "email":  "pooja.sharma@example.com",
+                          "phone":  "+91 98765 43210",
+                          "subject":  "Custom Bridal Beaded Necklace Order",
+                          "productName":  "Pastel Bloom Daisy \u0026 Freshwater Pearl Choker",
+                          "productId":  "prod-1",
+                          "message":  "Hi Sara! Loved your collection. Can you customize 5 matching daisy pearl chokers for my bridesmaids in peach and gold? Looking for delivery in Pune.",
+                          "preferredContact":  "WhatsApp",
+                          "status":  "New",
+                          "createdAt":  "2026-08-19T14:30:00Z"
+                      },
+                      {
+                          "id":  "enq-102",
+                          "name":  "Ananya Joshi",
+                          "email":  "ananya.joshi@example.com",
+                          "phone":  "+91 97654 32109",
+                          "subject":  "Private Group Art Workshop in Nagpur",
+                          "productName":  "Nagpur Weekend Beading \u0026 Jewellery Masterclass",
+                          "productId":  "prod-7",
+                          "message":  "Hello! We are a group of 6 friends planning a birthday celebration. Can we book a private creative beading workshop session on Sunday at your Surendranagar studio?",
+                          "preferredContact":  "Email",
+                          "status":  "In-Progress",
+                          "createdAt":  "2026-08-19T16:15:00Z"
+                      }
+                  ],
+    "orders":  [
+                   {
+                       "subtotal":  899,
+                       "shipping":  79,
+                       "total":  978,
+                       "discount":  0,
+                       "customer":  {
+                                        "email":  "meera.nair@example.com",
+                                        "name":  "Meera Nair",
+                                        "phone":  "+91 98111 22334",
+                                        "address":  "Flat 101, Lotus Palms, Koregaon Park, Pune - 411001"
+                                    },
+                       "paymentMethod":  "UPI / GPay",
+                       "items":  [
+                                     {
+                                         "price":  899,
+                                         "quantity":  1,
+                                         "name":  "Pastel Bloom Daisy \u0026 Freshwater Pearl Choker",
+                                         "id":  "prod-1"
+                                     }
+                                 ],
+                       "id":  "ORD-2026-1969",
+                       "status":  "Processing",
+                       "createdAt":  "2026-08-23T13:54:23Z"
+                   },
+                   {
+                       "subtotal":  899,
+                       "shipping":  79,
+                       "total":  978,
+                       "discount":  0,
+                       "customer":  {
+                                        "email":  "meera.nair@example.com",
+                                        "name":  "Meera Nair",
+                                        "phone":  "+91 98111 22334",
+                                        "address":  "Flat 101, Lotus Palms, Koregaon Park, Pune - 411001"
+                                    },
+                       "paymentMethod":  "UPI / GPay",
+                       "items":  [
+                                     {
+                                         "price":  899,
+                                         "quantity":  1,
+                                         "name":  "Pastel Bloom Daisy \u0026 Freshwater Pearl Choker",
+                                         "id":  "prod-1"
+                                     }
+                                 ],
+                       "id":  "ORD-2026-8906",
+                       "status":  "Processing",
+                       "createdAt":  "2026-08-20T11:35:16Z"
+                   },
+                   {
+                       "subtotal":  899,
+                       "shipping":  79,
+                       "total":  978,
+                       "discount":  0,
+                       "customer":  {
+                                        "email":  "meera.nair@example.com",
+                                        "name":  "Meera Nair",
+                                        "phone":  "+91 98111 22334",
+                                        "address":  "Flat 101, Lotus Palms, Koregaon Park, Pune - 411001"
+                                    },
+                       "paymentMethod":  "UPI / GPay",
+                       "items":  [
+                                     {
+                                         "price":  899,
+                                         "quantity":  1,
+                                         "name":  "Pastel Bloom Daisy \u0026 Freshwater Pearl Choker",
+                                         "id":  "prod-1"
+                                     }
+                                 ],
+                       "id":  "ORD-2026-4282",
+                       "status":  "Processing",
+                       "createdAt":  "2026-08-19T19:15:36Z"
+                   },
+                   {
+                       "id":  "ORD-2026-8801",
+                       "customer":  {
+                                        "name":  "Riya Verma",
+                                        "email":  "riya.v@example.com",
+                                        "phone":  "+91 91234 56789",
+                                        "address":  "Flat 402, Green Meadows, Bandra West, Mumbai, MH - 400050"
+                                    },
+                       "items":  [
+                                     {
+                                         "id":  "prod-1",
+                                         "name":  "Pastel Bloom Daisy \u0026 Freshwater Pearl Choker",
+                                         "price":  899,
+                                         "quantity":  1
+                                     },
+                                     {
+                                         "id":  "prod-4",
+                                         "name":  "Aesthetic Pastel Phone Charm \u0026 Wristlet",
+                                         "price":  349,
+                                         "quantity":  1
+                                     }
+                                 ],
+                       "subtotal":  1248,
+                       "discount":  124.8,
+                       "couponCode":  "BEADLOVE10",
+                       "shipping":  0,
+                       "total":  1123.2,
+                       "paymentMethod":  "UPI / GPay",
+                       "status":  "Processing",
+                       "createdAt":  "2026-08-19T15:00:00Z"
+                   }
+               ]
+}
